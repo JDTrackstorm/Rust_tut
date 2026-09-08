@@ -1,6 +1,10 @@
 use std::io;
+use crate::clear_screen;
 
 pub fn calc (){
+    clear_screen();
+
+
     let mut history: Vec<String> = Vec::new();
 
     'main_loop: loop {

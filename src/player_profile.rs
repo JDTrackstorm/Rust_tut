@@ -1,4 +1,6 @@
 use std::io;
+use crate::clear_screen;
+
 #[derive(Debug)]
 enum Status {
     Online,
@@ -12,7 +14,7 @@ struct Player{
 }
 
 pub fn pl_prof(){
-
+    clear_screen();
 
     println!("Wie soll der Spieler heißen?");
 

@@ -1,3 +1,5 @@
+use crate::clear_screen;
+
 #[derive(Debug)]
 enum Aktion {
     Angreifen,
@@ -6,6 +8,8 @@ enum Aktion {
     Beenden
 }
 pub fn menu() {
+    clear_screen();
+    
     loop {
         println!("\nWas möchtest du tun?");
         println!("[1] Angreifen");
