@@ -21,7 +21,7 @@ pub fn calc (){
                     println!("{}", eintrag);
                 }
                 println!("----------------------------\n");
-                continue; // Springt direkt zurück an den Anfang der Schleife
+                continue;
             }
             "r" => {
                 println!("Dies ist ein Taschenrechner! Gib nun die erste Zahl ein.");
@@ -34,7 +34,7 @@ pub fn calc (){
                         .expect("Failed to read line");
 
                     match num1_in.trim().parse() {
-                        Ok(num) => break num, // Beendet die Schleife und übergibt den Wert an `num1`
+                        Ok(num) => break num,
                         Err(_) => println!("Schreibe bitte eine Zahl!"),
                     }
                 };
@@ -49,7 +49,7 @@ pub fn calc (){
                         .expect("Failed to read line");
 
                     match num2_in.trim().parse() {
-                        Ok(num) => break num, // Beendet die Schleife und übergibt den Wert an `num2`
+                        Ok(num) => break num,
                         Err(_) => println!("Schreibe bitte eine Zahl!"),
                     }
                 };
@@ -63,7 +63,7 @@ pub fn calc (){
                         .expect("Failed to read line");
 
                     match op_in.trim().chars().next() {
-                        Some(c) => break c, // Bricht die Schleife ab und übergibt das Zeichen an `op`
+                        Some(c) => break c,
                         None => println!("Schreibe bitte einen Operator!"),
                     }
                 };
@@ -73,7 +73,7 @@ pub fn calc (){
                     '-' => num1 - num2,
                     '*' => num1 * num2,
                     '/' => num1 / num2,
-                    _ => 0.0, // Fallback
+                    _ => 0.0,
                 };
 
                 let eintrag = format!("{} {} {} = {}", num1, op, num2, ergebnis);

@@ -1,12 +1,10 @@
 mod calc;
 mod player_profile;
-
-use std::io;
+mod menu;
 
 fn main() {
-    calc::calc();
-
+    // calc::calc();
+    // player_profile::pl_prof();
+    menu::menu();
 }
-
-
 
